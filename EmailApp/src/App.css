@@ -1,43 +1,105 @@
-body{
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(223, 192, 150);
 }
 
-.emailCard{
-  border: 1px solid black;
-  width: 800px;
-  border-radius:10px;
-  padding:10px;
-  margin-bottom:10px;
+body {
+  font-size: 18px;
+ 
 }
 
-
-.nav ul{
-  list-style: none;
-}
-
-.commonButton{
-  width:110px;
-  height: 40px;
-  border: 2px solid black;
-  border-radius:30px;
+.nav {
+  background-color: #1c1d1e;
+  position: fixed;
+  padding: 30px;
+  height: 100vh;
+  width: 250px;
+  z-index: 0;
   
 }
 
-.buttonCard{
+/* .nav .navLink{
+  color: red;
+  text-decoration: none;
+} */
+
+.nav ul {
+  
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 100px;
+  font-size: 40px;
+  line-height: 32px;
+  
+}
+.nav ul li {
+  color: white;
+}
+
+.FilterCard{
+  border: 1px solid orange;
+  width: 1000px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#container{
+  position: absolute;
+  margin-left:6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  
+}
+
+.emailCard {
+  border: 1px solid black;
+  width: 1000px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #1c1d1e;
+  /* height: 150px; */
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  line-height:33px;
+  font-size: 22px;
+  
+}
+.emailCard p{
+  color: white;
+}
+
+.commonButton {
+  width: 110px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+.buttonCard {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+
+
 .commonButton:first-child {
   align-self: flex-start;
 }
 
-.linkStyle{
-  color: blue;
+.linkStyle {
+  color: white;
   text-decoration: none;
 }
 

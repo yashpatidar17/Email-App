@@ -11,13 +11,11 @@ export const EmailCard = ()=>{
             const { mId, unread, isStarred, subject, content } = item;
             return (
               <div key={mId} className="emailCard">
-                <p>Subject : {subject}</p>
-                <p>{content}</p>
-                
-                
+                <h2>Subject : {subject}</h2>
+                <p >{content}</p>
                 <div className="buttonCard">
                 <button  onClick={()=>dispatch({type:"starred",payload:item})} style={{color: isStarred ?"green":"red"}} className="commonButton">Star</button>
-                <Link className="linkStyle">View Details</Link>
+                <Link className="linkStyle" to={`/email/${mId}`}>View Details</Link>
                 <button onClick={()=>dispatch({type:"Delete",payload:mId})} className="commonButton">Delete</button>
                 <button onClick={()=>dispatch({type:"readUnread",payload:item})} className="commonButton">{unread ? "Mark as Read" : "Mark as Unread"}</button>
                 <button onClick={()=>dispatch({type:"ADD_TO_SPAM",payload: mId  })} className="commonButton">Report Spam</button>

@@ -6,14 +6,15 @@ export const Spam = ()=>{
     const spamMail = state?.spam
     console.log(spamMail);
     return(
-        <div>
+        <div id="container">
         <h1>Spam</h1>
         {spamMail?.map((item)=>(
-            <div key={item.mId}>
+            <div key={item.mId} className="emailCard">
                 <p>Subject : {item.subject}</p>
                 <p>{item.content}</p>
               </div>
         ))}
-</div>
+        </div>
+        
     )
 }

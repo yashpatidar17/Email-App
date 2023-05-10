@@ -7,7 +7,7 @@ import { FilterCard } from "../Component/FilterCard";
 export const Inbox = () => {
   const {UnreadCount,starredCount} = useContext(EmailContext)
   return (
-    <div>
+    <div id="container">
       <h1>Inbox</h1>
       <FilterCard/>
       <p>Unread Mail : {UnreadCount}</p>

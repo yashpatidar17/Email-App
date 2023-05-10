@@ -1,23 +1,32 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import { Inbox } from "./Pages/Inbox";
 import { Spam } from "./Pages/Spam";
 import { Trash } from "./Pages/Trash";
+import { Email } from "./Pages/Email";
+
+// const navStyle=({ isActive, isPending }) => {
+//   return {
+//     fontWeight: isActive ? "bold" : "",
+//     color: isPending ? "yellow" : "black",
+//   };
+// }
+// style={navStyle}
 
 function App() {
   return (
-    <>
+    <div>
         <nav className="nav">
           <ul>
             <li>
-              <Link to="/">Inbox </Link>
+              <NavLink to="/" >Inbox </NavLink>
             </li>
             <li>
-              <Link to="/spam"> Spam </Link>
+              <NavLink to="/spam" > Spam </NavLink>
             </li>
             <li>
-              <Link to="/trash">Trash</Link>
+              <NavLink to="/trash" >Trash</NavLink>
             </li>
           </ul>
         </nav>
@@ -25,8 +34,9 @@ function App() {
         <Route path="/" element={<Inbox />} />
         <Route path="/spam" element={<Spam />} />
         <Route path="/trash" element={<Trash />} />
+        <Route path="/email/:emailId" element={<Email/>} />
       </Routes>
-    </>
+    </div>
   );
 }
 

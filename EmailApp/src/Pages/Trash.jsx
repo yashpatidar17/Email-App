@@ -6,10 +6,10 @@ export const Trash = () => {
   const trashMail = state?.deleted;
   console.log(trashMail);
   return (
-    <div>
-      <h1>Spam</h1>
+    <div id="container">
+      <h1>Trash</h1>
       {trashMail?.map((item) => (
-        <div key={item.mId}>
+        <div key={item.mId} className="emailCard">
           <p>Subject : {item.subject}</p>
           <p>{item.content}</p>
         </div>
